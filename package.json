@@ -1,6 +1,6 @@
 {
 	"name": "strict-uri-encode",
-	"version": "2.0.0",
+	"version": "2.0.1-paa",
 	"description": "A stricter URI encode adhering to RFC 3986",
 	"license": "MIT",
 	"repository": "kevva/strict-uri-encode",
@@ -13,11 +13,14 @@
 		"node": ">=4"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && ava",
+		"build": "babel index.js --out-file lib/index.js"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"lib/index.js"
 	],
+	"main": "lib/index.js",
 	"keywords": [
 		"component",
 		"encode",
@@ -26,6 +29,8 @@
 	],
 	"devDependencies": {
 		"ava": "*",
+		"babel-cli": "^6.26.0",
+		"babel-preset-env": "^1.7.0",
 		"xo": "*"
 	}
 }
